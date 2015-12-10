@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+group = 'com.github.lukaszbudnik.redis'
+archivesBaseName = 'redis-locks'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url 'http://repository.apache.org/content/repositories/snapshots'
+    }
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-simple:1.7.13'
+    compile 'org.redisson:redisson:2.2.0'
+
+    testCompile 'junit:junit:4.12'
+}
